@@ -1,0 +1,110 @@
+<?php
+            // runninga a foreach loop to get all products information from the database
+            foreach ($rows as $row) :
+            ?>
+                <div class="col-sm-4 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                    <div class="card" style="width: 20rem;">
+                        <img src="../admin/uploads/<?= $row['product_image'] ?>" class="card-img-top img-fluid" style="height: 250px;" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $row['product_name'] ?></h5>
+                            <p class="card-text" style="height:100px;"><?= $row['product_description'] ?></p>
+                            <div class="check">
+                                <a href="products.php?id=<?= $row['id'] ?>" class="button-cart">View</a>
+                                <a href="#" class="button-cart">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            <?php endforeach ?>
+
+
+
+             <script>
+                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                (function() {
+                    'use strict'
+
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.querySelectorAll('.needs-validation')
+
+                    // Loop over them and prevent submission
+                    Array.prototype.slice.call(forms)
+                        .forEach(function(form) {
+                            form.addEventListener('submit', function(event) {
+                                if (!form.checkValidity()) {
+                                    event.preventDefault()
+                                    event.stopPropagation()
+                                }
+
+                                form.classList.add('was-validated')
+                            }, false)
+                        })
+                })()
+            </script>
+
+
+
+
+
+            $(document).ready(function() {
+    $("form").submit(function(event) {
+        event.preventDefault();
+
+        console.log("Before AJAX");
+
+        var name = $("#name").val();
+        // ... (other variables)
+
+        $.post("postComment.php", {
+            name: name,
+            // ... (other variables)
+        }, function(response) {
+            console.log("After AJAX");
+
+            if (response === "success") {
+                console.log("Success! Redirecting...");
+                window.location.href = "products.php";
+            } else {
+                console.log("Error: " + response);
+                $(".form-message").html("Error occurred. Please try again.");
+            }
+        });
+    });
+});
+
+
+
+
+
+
+
+ <li>
+                <a href="../cart/checkout.php"><i class="fa fa-cart-plus fa-2x"></i>
+                    <span class="position-relative top-0 start-60 translate-middle badge rounded-circle bg-success">
+                        <?= count($rows, COUNT_NORMAL) ?>
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </a>
+            </li>
+
+
+
+
+            tawk.to
+
+            <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6581a72607843602b803a773/1hi179smi';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+

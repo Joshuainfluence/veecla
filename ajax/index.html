@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/font_awesome/css/font-awesome.css">
+    <script src="jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("#test").load("data.txt", {
+                    Name: "Joshua",
+                    age: "17 years of age"
+                }, function(){
+                    alert("Hello world, I just clicked the link and i am happy");
+                });
+            })
+            
+        });
+    </script>
+</head>
+<body>
+    
+    <div id="test">
+        <p>This is the first content!</p>
+       <i class="fa fa-search"></i>
+    </div>
+    <button id="btn">Click to change</button>
+</body>
+</html>
