@@ -46,7 +46,7 @@
         <img src="img/WhatsApp Image 2023-12-20 at 18.31.06_3709ef4b.jpg" class="background-clip" alt="">
         <div class="content">
             <h1>Veecla</h1>
-            <h3>Realising your true Beauty</h3>
+            <h3>Realising True Beauty</h3>
             <a href="#">Explore</a>
             <a href="inc/signup.php">Signup</a>
         </div>

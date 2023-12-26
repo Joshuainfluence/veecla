@@ -87,35 +87,32 @@ $rows = $display->cartChecker($userId);
                         <span class="badge bg-default-alt rounded-pill"><?= count($rows, COUNT_NORMAL) ?></span>
                     </h4>
                     <ul class="list-group mb-3">
-                        <?php
-                        foreach ($rows as $row) :
-
-                        ?>
+                        <?php foreach ($rows as $row) : ?>
                             <li class="list-group-item d-flex justify-content-between lh-sm">
                                 <div>
                                     <h6 class="my-0"><?= $row['product_name'] ?></h6>
                                     <small class="text-muted"><?= $row['date_added'] ?></small>
                                 </div>
-                                
+
                                 <span class="text-muted">$<?= $row['product_price'] ?></span>
 
-                                <span class="text-muted" id="pricey"></span>
+                                <span class="text-muted pricey-<?= $row['product_id'] ?>"></span>
                                 <script>
-                                var price = <?= $row['product_price'] * 1000 ?>;
-                                currency_value = price.toLocaleString("en-NG", {
-                                    style: "currency",
-                                    currency: "NGN"
+                                    var price<?= $row['product_id'] ?> = <?= $row['product_price'] * 1000 ?>;
+                                    var currency_value<?= $row['product_id'] ?> = price<?= $row['product_id'] ?>.toLocaleString("en-NG", {
+                                        style: "currency",
+                                        currency: "NGN"
+                                    });
 
-                                })
-                                document.getElementById("pricey").innerHTML = currency_value;
-                                console.log(currency_value);
+                                    // Get the element with the specific class for this product
+                                    var element<?= $row['product_id'] ?> = document.querySelector(".pricey-<?= $row['product_id'] ?>");
 
-                                // document.write(currency); 
-                            </script>
+                                    // Update the element with the converted currency value
+                                    element<?= $row['product_id'] ?>.innerHTML = currency_value<?= $row['product_id'] ?>;
 
+                                    console.log(currency_value<?= $row['product_id'] ?>);
+                                </script>
                             </li>
-                            
-
                         <?php endforeach ?>
 
                         <li class="list-group-item d-flex justify-content-between bg-light">
@@ -128,16 +125,16 @@ $rows = $display->cartChecker($userId);
                         <li class="list-group-item d-flex justify-content-between">
                             <span>Total (USD)</span>
                             <?php
-                            $total = 0; // Initialize total to 0
+                            $total = 0;
                             foreach ($rows as $row) {
-                                $total += $row['product_price']; // Add the price of each item to the total
+                                $total += $row['product_price'];
                             }
                             ?>
-
                             <strong>$<?= $total ?></strong>
                             <strong id="total_price"></strong>
                         </li>
                     </ul>
+
 
                     <form class="card p-2">
                         <div class="input-group">
