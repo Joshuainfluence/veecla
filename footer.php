@@ -254,7 +254,7 @@
                 <li class="nav-item mb-2 d-flex justify-content-center"><a href="#" class="nav-link p-0">Features</a></li>
                 <li class="nav-item mb-2 d-flex justify-content-center"><a href="#" class="nav-link p-0">Pricing</a></li>
                 <li class="nav-item mb-2 d-flex justify-content-center"><a href="faq.php" class="nav-link p-0">FAQs</a></li>
-                <li class="nav-item mb-2 d-flex justify-content-center"><a href="#" class="nav-link p-0">About</a></li>
+                <li class="nav-item mb-2 d-flex justify-content-center"><a href="aboutUs.php+" class="nav-link p-0">About</a></li>
             </ul>
 
         </div>
