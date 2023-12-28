@@ -1,3 +1,4 @@
+
 * {
     padding: 0;
     margin: 0;
@@ -32,7 +33,7 @@
 .logo {
     font-weight: 600;
     margin-left: 2%;
-    /* width: 40%; */
+    width: 30%;
     height: auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -43,10 +44,10 @@
     margin-top: -25px;
 }
 
-/* .links {
-    width: 60%;
+.links {
+    width: 70%;
 
-} */
+}
 
 ul {
     text-decoration: none;
@@ -60,7 +61,6 @@ ul {
 li a {
     text-decoration: none;
     color: #fff;
-
 }
 
 li a:hover {
@@ -96,9 +96,35 @@ li a:hover {
     height: auto;
     background-color: #FF87CE;
     border: 1px solid #FF87CE;
+    border-radius: 5px;
     color: #000;
     margin-left: 10px;
     text-align: center;
+}
+
+.content-list .drop-menu{
+    background: black;
+    top: 85px;
+    line-height: 45px;
+    position: absolute;
+    color: white;
+    width: 180px;
+    opacity: 0;
+    visibility: hidden;
+}
+.drop-menu li a{
+    width: 100%;
+    display: block;
+    padding: 0 0 0 15px;
+    font-weight: 400;
+}
+
+.content-list li:hover .drop-menu{
+    
+    top: 65px;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease;
 }
 
 .profile .button-sign:hover {
@@ -119,48 +145,12 @@ li a:hover {
 .logo-mobile {
     display: none;
 }
-
-.buttons-tin {
+.buttons-tin{
     display: none;
 }
-
-.cart-img {
+.cart-img{
     display: none;
 }
-
-.left-section,
-.center-section,
-.right-section {
-    display: flex;
-    /* align-items: center; */
-    justify-content: space-between;
-}
-
-.left-section {
-    width: 50%;
-    
-    /* Adjust the width as needed */
-}
-.content-list{
-    display: flex;
-    
-    justify-content: space-around;
-}
-
-.center-section {
-    width: 20%;
-    /* Adjust the width as needed */
-}
-
-.right-section {
-    width: 30%;
-    /* Adjust the width as needed */
-    justify-content: flex-end;
-}
-.for-mobile{
-    display: none;
-}
-
 /* @media only screen and (min-width:992px) and (max-width:1200px) {
 
 } */
@@ -177,6 +167,14 @@ li a:hover {
         height: 100px;
 
     }
+    .drop-menu li a{
+        width: 100%;
+        display: block;
+        padding: 0 0 0 15px;
+        font-weight: 400;
+        font-size: 10px;
+    
+    }
 
     .logo-mobile {
         display: block;
@@ -189,46 +187,11 @@ li a:hover {
     }
 
     .img-mobile-logo {
-
         width: 100%;
         /* height: 40px; */
         margin-top: 0px;
         height: 70px;
     }
-    /* setting the display of cart on the mobile screen */
-     .for-mobile{
-        display: block;
-    }
-
-    .left-section,
-    .center-section,
-    .right-section {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .left-section {
-        order: 2;
-    }
-
-    .center-section {
-        order: 1;
-    }
-
-    .right-section {
-        order: 3;
-    }
-
-    .cart-img {
-        display: inline-block;
-        margin-left: 10px;
-        /* Adjust the margin as needed */
-    }
-
-    .mobile-nav-toggle {
-        order: 1;
-    }
-   
 }
 
 @media screen and (max-width:1200px) {
@@ -247,6 +210,14 @@ li a:hover {
     and the z-index is for it to be at the front
     */
 
+    .drop-menu li a{
+        width: 100%;
+        display: block;
+        padding: 0 0 0 15px;
+        font-weight: 400;
+        font-size: 10px;
+    
+    }
     .mobile-nav-toggle {
         position: absolute;
         display: block;
@@ -263,8 +234,7 @@ li a:hover {
         right: 2rem;
         z-index: 9999;
     }
-
-    .cart-img {
+    .cart-img{
         position: absolute;
     }
 
@@ -299,44 +269,6 @@ li a:hover {
         transform: translateX(0%);
     }
 
-    .left-section,
-    .center-section,
-    .right-section {
-        width: 100%;
-        justify-content: center;
-    }
+    
 
-    .left-section {
-        order: 2;
-    }
-
-    .center-section {
-        order: 1;
-    }
-
-    .right-section {
-        order: 3;
-    }
-
-    .cart-img {
-        display: inline-block;
-        margin-left: 10px;
-        /* Adjust the margin as needed */
-    }
-
-    .mobile-nav-toggle {
-        order: 1;
-    }
-
-    .profile {
-        display: none;
-        /* Hide profile on mobile */
-    }
-    .for-mobile{
-        display: block;
-    }
-
-  
 }
-
-/* } */

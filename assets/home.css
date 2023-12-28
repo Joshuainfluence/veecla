@@ -62,9 +62,10 @@ section {
     border: 1px solid #FF1694;
     color: #fff;
     transition: 0.5s ease-in;
-    
+
 
 }
+
 .button-cart-alt {
     text-decoration: none;
     width: 120px;
@@ -77,7 +78,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 .button-cart-alt:hover {
@@ -90,6 +91,7 @@ section {
     color: #fff;
 
 }
+
 .button-cart-alt2 {
     text-decoration: none;
     width: 120px;
@@ -130,6 +132,15 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    opacity: 0;
+    /* Initially hide the element */
+    transform: translateY(-50px);
+    /* Initial position above */
+    transition: opacity 5s, transform 5s;
+    /* Transition properties */
+
+
 }
 
 .write2 h1 {
@@ -137,16 +148,19 @@ section {
     font-weight: 600;
     color: #fff;
 }
+
 .write2 h3 {
     text-align: center;
     font-weight: 600;
     color: #fff;
 }
-.write2 .buttons{
+
+.write2 .buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
 }
+
 .form1-control {
     outline: none;
     border: 1px solid #7E7E7E;
@@ -156,7 +170,8 @@ section {
     padding: .375rem .75rem;
     background: transparent;
 }
-.form1-control:focus{
+
+.form1-control:focus {
     border: 1px solid #FE48AA;
 }
 
@@ -166,27 +181,32 @@ section {
 }
 
 
-.bg-default{
+.bg-default {
     background-color: #879095;
 }
-.bg-default-alt{
-    background-color: #FF87CE;
-}
-.text-default{
-    color: #FF87CE;
-}
-.btn-default{
+
+.bg-default-alt {
     background-color: #FF87CE;
 }
 
-.btn-default:hover{
+.text-default {
+    color: #FF87CE;
+}
+
+.btn-default {
+    background-color: #FF87CE;
+}
+
+.btn-default:hover {
     background-color: #FF1694;
     color: #fff;
 }
-.btn-default-alt{
+
+.btn-default-alt {
     background-color: #7E7E7E;
 }
-.btn-default-alt:hover{
+
+.btn-default-alt:hover {
     background-color: #FF87CE;
-    
+
 }

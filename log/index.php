@@ -99,7 +99,7 @@ $data = $display->displayProducts4();
     .card-title {
         height: 1rem;
     }
-
+ 
 
 
     @media screen and (max-width: 1200px) {
@@ -180,6 +180,11 @@ $data = $display->displayProducts4();
             margin-left: 2%;
             /* animation: fixed_text 5s; */
         }
+
+        /* Add these styles to your existing styles */
+
+       
+
 
         /* @keyframes fixed_text {
             0%{
@@ -322,6 +327,29 @@ $data = $display->displayProducts4();
         require_once "../footer.php";
         ?>
 </section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the elements to be animated
+        var veeclaElement = document.querySelector('.write2 h1');
+        var trueBeautyElement = document.querySelector('.write2 h3');
+
+        // Function to animate the elements
+        function animateElements() {
+            veeclaElement.style.opacity = 1;
+            veeclaElement.style.transform = 'translateY(0)';
+
+            // Add a slight delay before animating the second element
+            setTimeout(function() {
+                trueBeautyElement.style.opacity = 1;
+                trueBeautyElement.style.transform = 'translateY(0)';
+            }, 500); // Adjust the delay as needed
+        }
+
+        // Trigger the animation when the page is loaded
+        animateElements();
+    });
+</script>
 
 </body>
 

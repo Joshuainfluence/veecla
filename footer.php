@@ -192,7 +192,7 @@
             border: 1px solid #FF1694;
             color: #fff;
             transition: 0.5s ease-out;
-            
+
 
         }
 
@@ -264,7 +264,7 @@
                 <li class="nav-item mb-2 d-flex justify-content-center"><a href="#" class="nav-link p-0"><i class="fa fa-facebook"></i> facebook</a></li>
                 <li class="nav-item mb-2 d-flex justify-content-center"><a href="https://instagram.com/veeclaofficial?igshid=NzZlODBkYWE4Ng%3D%3D&utm_source=qr" class="nav-link p-0"><i class="fa fa-instagram"></i> instagram</a></li>
                 <li class="nav-item mb-2 d-flex justify-content-center"><a href="https://www.tiktok.com/@veecla_?_t=8hnhWFOMVGw&_r=1" class="nav-link p-0"><i class="fa fa-tiktok"></i> Tiktok</a></li>
-               
+
             </ul>
 
         </div>
@@ -334,15 +334,32 @@
                         </svg>
                     </a>
                 </li>
-            
+
             </ul>
         </div>
 </footer>
 <script>
-    window.addEventListener('load', function () {
+    window.addEventListener('load', function() {
         // Hide the loader after 3000 milliseconds (3 seconds)
-        setTimeout(function () {
+        setTimeout(function() {
             document.querySelector('.loader-wrapper').style.display = 'none';
         }, 1000);
     });
 </script>
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function() {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/6581a72607843602b803a773/1hi179smi';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->

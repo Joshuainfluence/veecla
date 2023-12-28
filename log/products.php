@@ -31,14 +31,14 @@ foreach ($rows as $row) :
                             <div class="col-md-3 carousel-item">
                                 <div class="card" style="width: 100%;">
                                     <div class="w-100" style="height: 30rem;">
-                                        <img src="../img/6556e5fb45239eedd9b5427160b007de.jpg" class="w-100 h-100" style="object-fit: cover;">
+                                    <img src="../admin/uploads/<?= $row['related_image'] ?>" class="w-100 h-100" style="object-fit: cover;">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 carousel-item">
                                 <div class="card" style="width: 100%;">
                                     <div class="w-100" style="height: 30rem;">
-                                        <img src="../img/99c617704b461650dd35febb1046e0dc.jpg" class="w-100 h-100" style="object-fit: cover;">
+                                    <img src="../admin/uploads/<?= $row['applied_image'] ?>" class="w-100 h-100" style="object-fit: cover;">
                                     </div>
                                 </div>
                             </div>
