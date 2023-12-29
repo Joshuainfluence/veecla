@@ -71,5 +71,16 @@ class GetUser extends Dbh{
         $details = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $details;
     }
+
+    protected function verifyUser($username){
+        $sql = "SELECT * FROM users WHERE username = ?";
+        $stmt = $this->connection()->prepare($sql);
+        if (!$stmt->execute([$username])) {
+            $stmt = null;
+            exit();
+        }
+        $details = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $details;
+    }
     
 }

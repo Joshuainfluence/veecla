@@ -24,7 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $signup = new SignupContr($fullName, $username, $email, $password, $Conpassword, $check, $_FILES);
 
     // signUser is a method created in the controller class for final execution 
-    header("Location: ../inc/login.php?error=none");
+    header("Location: ../sendEmail/send.php?error=none");
+    $_SESSION['username'] = $username;
+    $_SESSION['email'] = $email;
     $signup->signUser();
 
     

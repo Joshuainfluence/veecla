@@ -49,7 +49,7 @@
 
 }
 
-ul {
+.content-list{
     text-decoration: none;
     list-style: none;
     display: flex;
@@ -102,8 +102,8 @@ li a:hover {
     text-align: center;
 }
 
-.content-list .drop-menu{
-    background: black;
+ul .drop-menu{
+    background: grey;
     top: 85px;
     line-height: 45px;
     position: absolute;
@@ -111,8 +111,10 @@ li a:hover {
     width: 180px;
     opacity: 0;
     visibility: hidden;
+    box-shadow: 3px 3px 3px 3px rgb(183, 182, 182);
 }
 .drop-menu li a{
+    list-style: none;
     width: 100%;
     display: block;
     padding: 0 0 0 15px;
@@ -121,7 +123,7 @@ li a:hover {
 
 .content-list li:hover .drop-menu{
     
-    top: 65px;
+    top: 44px;
     visibility: visible;
     opacity: 1;
     transition: all 0.3s ease;

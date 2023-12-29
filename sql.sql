@@ -62,6 +62,8 @@ CREATE TABLE cart(
     product_image varchar(1000) NOT NULL,
     is_product TINYINT(1) NOT NULL DEFAULT 0,
     dateAdded TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+    related_image varchar(1000) NOT NULL,
+    applied_image varchar(1000) NOT NULL,
  );
 
  CREATE TABLE review(

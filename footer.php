@@ -1,9 +1,9 @@
-<!-- <footer class="container-fluid py-5 text-light">
+<footer class="container-fluid py-5 text-light">
     <div class="row">
-        <div class="col-2">
-            <h5 class="d-flex justify-content-center">Section</h5>
+        <div class="col-3">
+            <h5 class="d-flex justify-content-center fw-bold text-dark">Section</h5>
             <style>
-              .nav-link {
+                .nav-link {
                     text-decoration: none;
                     color: #fff;
                 }
@@ -20,10 +20,32 @@
                 <li class="nav-item mb-2 d-flex justify-content-center"><a href="faq.php" class="nav-link p-0">FAQs</a></li>
                 <li class="nav-item mb-2 d-flex justify-content-center"><a href="#" class="nav-link p-0">About</a></li>
             </ul>
-            
+
+        </div>
+        <div class="col-3">
+            <h5 class="d-flex justify-content-center fw-bold text-dark">Socials</h5>
+            <style>
+                .nav-link {
+                    text-decoration: none;
+                    color: #fff;
+                }
+
+                .nav-link:hover {
+                    color: #FF1694;
+                    transition: 0.5s ease-in;
+                }
+            </style>
+            <ul class="nav flex-column text-light">
+                <li class="nav-item mb-2 d-flex justify-content-center"><a href="#" class="nav-link p-0 ">Home</a></li>
+                <li class="nav-item mb-2 d-flex justify-content-center"><a href="#" class="nav-link p-0">Features</a></li>
+                <li class="nav-item mb-2 d-flex justify-content-center"><a href="#" class="nav-link p-0">Pricing</a></li>
+                <li class="nav-item mb-2 d-flex justify-content-center"><a href="faq.php" class="nav-link p-0">FAQs</a></li>
+                <li class="nav-item mb-2 d-flex justify-content-center"><a href="#" class="nav-link p-0">About</a></li>
+            </ul>
+
         </div>
 
-        <div class="col-8 offset-1 text-light ">
+        <div class="col-5 offset-1 text-light ">
             <form>
                 <h5>Subscribe to our newsletter</h5>
                 <p>Monthly digest of whats new and exciting from us.</p>
@@ -100,12 +122,13 @@
 
                     }
                 </style>
-                <div class="d-flex w-100 gap-2">
-                    <label for="newsletter1" class="visually-hidden">Email address</label>
-                    <input id="newsletter1" type="text" class="form1-control" placeholder="Email address">
-                    <button class="button-cart-alt3" type="button">Subscribe</button>
-                </div>
+
             </form>
+        </div>
+        <div class="d-flex w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form1-control" placeholder="Email address">
+            <button class="button-cart-alt3" type="button">Subscribe</button>
         </div>
     </div>
 
@@ -135,7 +158,7 @@
             </li>
         </ul>
     </div>
-</footer> -->
+</footer>
 
 
 <footer class="container-fluid mt-5">

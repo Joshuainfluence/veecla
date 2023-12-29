@@ -108,3 +108,17 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 <!--End of Tawk.to Script-->
 
+
+
+
+
+
+for home.css under .write2
+
+ opacity: 0;
+    /* Initially hide the element */
+    transform: translateY(-50px);
+    /* Initial position above */
+    transition: opacity 5s, transform 5s;
+    /* Transition properties */
+

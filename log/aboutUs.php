@@ -52,6 +52,8 @@ require_once "../header.php";
             .row {
                 width: 100%;
                 opacity: 0; /* Initially hide the content */
+                margin-left: 2%;
+                width: 96%;
             }
 
             .row.show {
@@ -102,7 +104,7 @@ require_once "../header.php";
 
             </div>
         </div>
-        <div class="row fs-1 text-center animated-text">
+        <div class="row fs-1 text-center mt-5 bg-secondary animated-text">
             <p class="animated-text">
                 Our goal is to provide a seamless and
                 straightforward experience that you can trust,
@@ -113,7 +115,7 @@ require_once "../header.php";
             </p>
         </div>
 
-        <div class="row bg-light">
+        <div class="row bg-light mt-5">
             <div class="col-4">
                 <img src="../img/aunty_vic.jpg" alt="">
             </div>
@@ -133,14 +135,14 @@ require_once "../header.php";
             </div>
 
         </div>
-        <div class="row text-center fs-1 mt-5">
+        <div class="row text-center bg-secondary fs-1 mt-5">
             <h1 class="fw-bold mb-3 animated-text"> Our values</h1>
             <p>
 
                 It was important to us to build a value driven business. At Veecla,we believe in: Simplicity. Affordability. Authenticity. Quality. Transparency.
             </p>
         </div>
-        <div class="row text-center fs-1 mt-5">
+        <div class="row text-center bg-secondary fs-1 mt-5">
             <h1 class="fw-bold mb-3"> Our Products are;</h1>
             <p>
 

@@ -232,7 +232,7 @@ $data = $display->displayProducts4();
 
                         <div class="carousel-item active">
                             <div class="col d-flex">
-                                <img src="../img/DSC_1021.jpg" class="d-block w-50 bg-dark" height="400px" alt="...">
+                                <img src="../img/DSC_1705.jpg" class="d-block w-50 bg-dark" height="400px" alt="...">
                                 <div class="write2 bg-dark">
                                     <h1>Veecla</h1>
                                     <h3>Realising True Beauty</h3>
@@ -328,28 +328,28 @@ $data = $display->displayProducts4();
         ?>
 </section>
 
+
+<!-- Add the following script at the end of your HTML file, just before the closing </body> tag -->
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         // Get the elements to be animated
-        var veeclaElement = document.querySelector('.write2 h1');
-        var trueBeautyElement = document.querySelector('.write2 h3');
+        var productContainers = document.querySelectorAll('.product_container');
 
-        // Function to animate the elements
-        function animateElements() {
-            veeclaElement.style.opacity = 1;
-            veeclaElement.style.transform = 'translateY(0)';
-
-            // Add a slight delay before animating the second element
-            setTimeout(function() {
-                trueBeautyElement.style.opacity = 1;
-                trueBeautyElement.style.transform = 'translateY(0)';
-            }, 500); // Adjust the delay as needed
+        // Function to add the animate.css class
+        function addAnimationClass(element) {
+            element.classList.add('animate__animated', 'animate__fadeInUp');
         }
 
-        // Trigger the animation when the page is loaded
-        animateElements();
+        // Trigger the animation for each product container when the page is loaded
+        productContainers.forEach(function (container) {
+            addAnimationClass(container);
+        });
     });
 </script>
+
+
+
+
 
 </body>
 

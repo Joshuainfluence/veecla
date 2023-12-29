@@ -133,12 +133,7 @@ section {
     align-items: center;
     justify-content: center;
 
-    opacity: 0;
-    /* Initially hide the element */
-    transform: translateY(-50px);
-    /* Initial position above */
-    transition: opacity 5s, transform 5s;
-    /* Transition properties */
+
 
 
 }
@@ -210,3 +205,4 @@ section {
     background-color: #FF87CE;
 
 }
+
