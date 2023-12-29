@@ -37,6 +37,7 @@ if (isset($_SESSION['username'])) {
 
         // verification message to be sent to user
         $mail->Subject = "Verification Code";
+        
 
         // form redirects the user to an authentication page when they click the verification button
         // getting the user id from the database
