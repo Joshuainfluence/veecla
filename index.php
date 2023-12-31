@@ -27,6 +27,27 @@
             .background-clip{
                 display: none;
             }
+            select{
+                width: 10rem;
+                height: 4rem;
+                font-size: 1rem;
+                background-color: #000;
+                border: 2px solid #fff;
+                color: #fff;
+                text-align: center;
+                border-radius: 4rem;
+                font-weight: 600;
+                transition: 0.3s;
+            }
+            select:hover{
+                background-color: #636363;
+                color: #000;
+                border: 1px solid #636363;
+            }
+            select option{
+                background-color: #fff;
+                color: #000;
+            }
 
             @media screen and (max-width:992px) {
                 .background-clip {
@@ -47,8 +68,13 @@
         <div class="content">
             <h1>Veecla</h1>
             <h3>Realising True Beauty</h3>
-            <a href="#">Explore</a>
-            <a href="inc/signup.php">Signup</a>
+            <select name="country" id="country">
+                <option value="default" selected>Select Country</option>
+                <option value="default">Nigeria</option>
+                <option value="default">South Africa</option>
+                <option value="default">Italy</option>
+            </select>
+            <a href="inc/login.php">Shop Now</a>
         </div>
     </div>
 </body>

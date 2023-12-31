@@ -36,11 +36,10 @@
                 }
             </style>
             <ul class="nav flex-column text-light">
-                <li class="nav-item mb-2 d-flex justify-content-center"><a href="#" class="nav-link p-0 ">Home</a></li>
-                <li class="nav-item mb-2 d-flex justify-content-center"><a href="#" class="nav-link p-0">Features</a></li>
-                <li class="nav-item mb-2 d-flex justify-content-center"><a href="#" class="nav-link p-0">Pricing</a></li>
-                <li class="nav-item mb-2 d-flex justify-content-center"><a href="faq.php" class="nav-link p-0">FAQs</a></li>
-                <li class="nav-item mb-2 d-flex justify-content-center"><a href="#" class="nav-link p-0">About</a></li>
+                <li class="nav-item mb-2 d-flex justify-content-center"><a href="#" class="nav-link p-0"><i class="fa fa-facebook"></i> facebook</a></li>
+                <li class="nav-item mb-2 d-flex justify-content-center"><a href="https://instagram.com/veeclaofficial?igshid=NzZlODBkYWE4Ng%3D%3D&utm_source=qr" class="nav-link p-0"><i class="fa fa-instagram"></i> instagram</a></li>
+                <li class="nav-item mb-2 d-flex justify-content-center"><a href="https://www.tiktok.com/@veecla_?_t=8hnhWFOMVGw&_r=1" class="nav-link p-0"><i class="fa fa-tiktok"></i> Tiktok</a></li>
+
             </ul>
 
         </div>

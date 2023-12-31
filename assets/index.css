@@ -22,12 +22,12 @@ body{
     z-index: 9999;
 }
 .content h1{
-    font-size: 95px;
+    font-size: 50px;
     color: #fff;
     margin-bottom: 30px;
 }
 .content h3{
-    font-size: 50px;
+    font-size: 30px;
     color: #fff;
     margin-bottom: 50px;
 }
@@ -71,12 +71,12 @@ body{
         height: 100vh;
     }
     .content h1{
-        font-size: 60px;
+        font-size: 40px;
         color: #fff;
         margin-bottom: 30px;
     }
     .content h3{
-        font-size: 30px;
+        font-size: 20px;
         color: #fff;
         margin-bottom: 50px;
     }
