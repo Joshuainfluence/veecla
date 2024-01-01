@@ -39,6 +39,7 @@
     object-fit: cover;
     background-size: cover;
     animation: 10s influence linear infinite;
+    transition: 0.5 ease-in;
     z-index: 999;
 }
 
@@ -136,28 +137,28 @@ p a:hover {
 
 @keyframes influence {
     0% {
-        background-image: url(../img/3b9934f8e72b853589c175b71a1eee64.jpg);
+        background-image: url(../img/001.jpg);
         object-fit: cover;
     }
 
     20% {
-        background-image: url(../img/8a792f1973e2b85be4d123cb50503890.jpg);
+        background-image: url(../img/002.jpg);
     }
 
     40% {
-        background-image: url(../img/99c617704b461650dd35febb1046e0dc.jpg);
+        background-image: url(../img/003.jpg);
     }
 
     60% {
-        background-image: url(../img/e0ddf38f319cf121fdfb971cb2b8e1c3.jpg);
+        background-image: url(../img/004.jpg);
     }
 
     80% {
-        background-image: url(../img/login.jpg);
+        background-image: url(../img/005.jpg);
     }
 
     100% {
-        background-image: url(../img/2d72a98b5c24961a1d574a8b387514eb.jpg);
+        background-image: url(../img/006.jpg);
     }
 }
 
