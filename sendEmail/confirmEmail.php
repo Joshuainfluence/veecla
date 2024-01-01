@@ -87,7 +87,7 @@
             <div class="title">
                 Enter Email your email address. A verification link will be sent to your Email to make necessary changes.
             </div>
-            <form action="https://mail.google.com/mail/u/0/#inbox/" method="POST">
+            <form action="sendEmail.php" method="POST">
                 <input type="text" name="user_email" placeholder="Enter E-mail" class="form-control">
                 <input type="submit" value="Proceed" class="button">
             </form>

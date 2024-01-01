@@ -13,4 +13,10 @@ class VerifyUser extends GetUser{
        return $data;
     }
 
+    public function confirmPasswordEmail(){
+        $data = $this->confirmEmailPassword($this->username);
+        return $data;
+    }
+
+
 }

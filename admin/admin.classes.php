@@ -83,4 +83,15 @@ class GetUser extends Dbh{
         return $details;
     }
     
+
+    protected function confirmEmailPassword($email){
+        $sql = "SELECT * FROM users WHERE email = ?";
+        $stmt = $this->connection()->prepare($sql);
+        if (!$stmt->execute([$email])) {
+            $stmt = null;
+            exit();
+        }
+        $details = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $details;
+    }
 }
