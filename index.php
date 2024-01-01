@@ -63,8 +63,8 @@
                 }
             }
         </style>
-                <img src="img/aunty_vic.jpg" class="background2-clip" alt="">
-        <img src="img/WhatsApp Image 2023-12-20 at 18.31.06_3709ef4b.jpg" class="background-clip" alt="">
+                <!-- <img src="img/aunty_vic.jpg" class="background2-clip" alt="">
+        <img src="img/WhatsApp Image 2023-12-20 at 18.31.06_3709ef4b.jpg" class="background-clip" alt=""> -->
         <div class="content">
             <h1>Veecla</h1>
             <h3>Realising True Beauty</h3>
