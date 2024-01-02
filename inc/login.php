@@ -11,34 +11,34 @@ require_once __DIR__ . "/../config/session.php";
     <title>Document</title>
     <link rel="stylesheet" href="../assets/login.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../assets/sweetalert/sweetalert2.all.min.js"></script>
-    <script src="../assets/sweetalert/jquery-3.6.4.min.js"></script>   
+    <script src="../assets/sweetalert/jquery-3.6.4.min.js"></script>
     <!-- <link rel="stylesheet" href="../assets/font_awesome/css/font-awesome.css"> -->
     <link rel="icon" type="image/x-icon" href="../img/logo5.png" />
 
 </head>
 
 <body>
-<style>
-    .script{
-        z-index: 9999;
-    }
-</style>
- <div class="script">
- <script>
-        window.onload = function() {
-            <?php if (isset($_SESSION['success'])) : ?>
-                Swal.fire("Success", "<?= $_SESSION['success'] ?>", "success");
-            <?php endif ?>
+    <style>
+        .script {
+            z-index: 9999;
+        }
+    </style>
+    <div class="script">
+        <script>
+            window.onload = function() {
+                <?php if (isset($_SESSION['success'])) : ?>
+                    Swal.fire("Success", "<?= $_SESSION['success'] ?>", "success");
+                <?php endif ?>
 
-            <?php if (isset($_SESSION['error'])) : ?>
-                Swal.fire("Error", "<?= $_SESSION['error'] ?>", "error");
-            <?php endif ?>
-        };
-    </script>
- </div>
+                <?php if (isset($_SESSION['error'])) : ?>
+                    Swal.fire("Error", "<?= $_SESSION['error'] ?>", "error");
+                <?php endif ?>
+            };
+        </script>
+    </div>
     <?php
     if (isset($_SESSION['success'])) :
         echo '<script>console.log("Success message: ' . $_SESSION['success'] . '");</script>';
@@ -126,4 +126,5 @@ require_once __DIR__ . "/../config/session.php";
 </body>
 
 </html>
-<?php unset($_SESSION['success']) ; unset($_SESSION['error']) ?>
+<?php unset($_SESSION['success']);
+unset($_SESSION['error']) ?>

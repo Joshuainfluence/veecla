@@ -1,3 +1,7 @@
+<?php 
+$id_userid = $_GET['id'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +9,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="../assets/sweetalert/sweetalert2.all.min.js"></script>
-    <script src="../assets/sweetalert/jquery-3.6.4.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="../img/logo5.png" />
 </head>
 
 <body>
@@ -84,41 +85,15 @@
             opacity: 1;
             line-height: 1.2rem;
         }
-
-        .script {
-            z-index: 9999;
-        }
     </style>
-    <div class="script">
-        <script>
-            window.onload = function() {
-                <?php if (isset($_SESSION['success'])) : ?>
-                    Swal.fire("Success", "<?= $_SESSION['success'] ?>", "success");
-                <?php endif ?>
-
-                <?php if (isset($_SESSION['error'])) : ?>
-                    Swal.fire("Error", "<?= $_SESSION['error'] ?>", "error");
-                <?php endif ?>
-            };
-        </script>
-    </div>
-    <?php
-    if (isset($_SESSION['success'])) :
-        echo '<script>console.log("Success message: ' . $_SESSION['success'] . '");</script>';
-    endif;
-
-    if (isset($_SESSION['error'])) :
-        echo '<script>console.log("Error message: ' . $_SESSION['error'] . '");</script>';
-    endif;
-    ?>
     <div class="container">
         <div class="background-div">
             <div class="title">
-                Enter Email your email address. A verification link will be sent to your Email to make necessary changes.
+                Enter your new Password
             </div>
-            <form action="sendEmailPassword.php" method="POST">
-                <input type="text" name="user_email" placeholder="Enter E-mail" class="form-control">
-                <input type="submit" value="Proceed" class="button">
+            <form action="update.inc.php?id=<?= $id_userid?>" method="POST">
+                <input type="text" name="new_password" placeholder="Enter Password" class="form-control">
+                <input type="submit" value="Update" class="button">
             </form>
         </div>
     </div>

@@ -83,7 +83,7 @@ $rows = $display->cartChecker($userId);
                            
                         </ul>
                     </li>
-                    <li>
+                    <li class="carty">
                         <a href="../cart/checkout.php"><i class="fa fa-cart-plus fa-2x"></i>
                             <span class="position-relative top-0 start-60 translate-middle badge rounded-circle bg-success">
                                 <?= count($rows, COUNT_NORMAL) ?>

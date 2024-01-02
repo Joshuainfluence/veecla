@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     // user's email address, fetched from the database
     foreach ($rows as $row) {
-        $mail->addAddress($row['email']);
+        $mail->addAddress($email);
 
         $mail->isHTML(true);
 
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <div><h2 style='font-size:20px; font-family:sans-serif; font-weight:600;'>Hello " . ucfirst($row['fullName']) . "</h2></div>
     <div style='font-size:15px; font-family:sans-serif;'>Click on the button to update your Pasword.<b>
     <br>
-   <form action='http://localhost/veecla/inc/login.php?id=" . $row['id'] . "' method='POST'>
+   <form action='http://localhost/veecla/sendEmail/changePassword.php?id=" . $row['id'] . "' method='POST'>
     <input type='submit' name='auth' style='width:100px; height:40px; color:#fff; font-size:15px; border:1px solid red; background-color: red; margin-top: 2rem;' value='Verify'>
    </form>
     </div>

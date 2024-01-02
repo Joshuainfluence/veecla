@@ -1,8 +1,9 @@
 <?php
-require_once __DIR__. "/../config/session.php";
+require_once __DIR__ . "/../config/session.php";
 
 // require_once __DIR__."/../public/signup.classes.php";
-class SignupContr extends Signup{
+class SignupContr extends Signup
+{
     private $fullName;
     private $username;
     private $email;
@@ -26,7 +27,7 @@ class SignupContr extends Signup{
     //setting it to public to have access to it from the index file
 
     public $error;
-    
+
 
     public function __construct($fullName, $username, $email, $password, $conpassword, $check, $files)
     {
@@ -37,35 +38,36 @@ class SignupContr extends Signup{
         $this->conpassword = $conpassword;
         $this->check = $check;
         // fpr image
-         // Use $files['product_image'] instead of $files['image']
-         $this->image_name = $files['profileImage']['name'] ?? '';
-         $this->image_size = $files['profileImage']['size'] ?? 0;
-         $this->image_temp = $files['profileImage']['tmp_name'] ?? '';
-         $this->image_type = $files['profileImage']['type'] ?? '';
-    
-       
+        // Use $files['product_image'] instead of $files['image']
+        $this->image_name = $files['profileImage']['name'] ?? '';
+        $this->image_size = $files['profileImage']['size'] ?? 0;
+        $this->image_temp = $files['profileImage']['tmp_name'] ?? '';
+        $this->image_type = $files['profileImage']['type'] ?? '';
     }
 
-    private function emptyInput(){
+    private function emptyInput()
+    {
         $result = 0;
         if (empty($this->fullName) || empty($this->username) || empty($this->email) || empty($this->password) || empty($this->conpassword) || empty($this->check) || empty($this->image_name)) {
             $result = true;
-        }else{
+        } else {
             $result = false;
         }
         return $result;
     }
 
-    private function passwordCheck(){
+    private function passwordCheck()
+    {
         $result = 0;
         if ($this->password !== $this->conpassword) {
             $result = true;
-        }else{
+        } else {
             $result = false;
         }
         return $result;
     }
-    private function userTaken(){
+    private function userTaken()
+    {
         $result = 0;
         if (!$this->UserCheck($this->username, $this->email)) {
             $result = false;
@@ -74,8 +76,9 @@ class SignupContr extends Signup{
         }
         return $result;
     }
-    
-    private function invalidEmail(){
+
+    private function invalidEmail()
+    {
         $result = 0;
         if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
             $result = false;
@@ -85,7 +88,8 @@ class SignupContr extends Signup{
         return $result;
     }
 
-    private function invalidUsername(){
+    private function invalidUsername()
+    {
         $result = 0;
         if (!preg_match("/^[a-zA-Z0-9]*$/", $this->username)) {
             $result = false;
@@ -93,14 +97,14 @@ class SignupContr extends Signup{
             $result = true;
         }
         return $result;
-        
     }
 
-    private function passwordLength(){
+    private function passwordLength()
+    {
         $result = 0;
         if (strlen($this->password) < 8) {
             $result = false;
-        }else{
+        } else {
             $result = true;
         }
         return $result;
@@ -157,7 +161,7 @@ class SignupContr extends Signup{
 
     private function newName()
     {
-        return "veecla".md5($this->image_name);
+        return "veecla" . md5($this->image_name);
     }
 
 
@@ -173,14 +177,16 @@ class SignupContr extends Signup{
         }
     }
 
-    private function set_message($type, $message){
+    private function set_message($type, $message)
+    {
         $_SESSION[$type] = $message;
     }
 
-   
 
 
-    public function signUser(){
+
+    public function signUser()
+    {
         if ($this->emptyInput() == true) {
             $this->set_message("error", "Fields cannot be empty");
             header("Location: ../inc/signup.php?error=emptyfields");
@@ -192,12 +198,12 @@ class SignupContr extends Signup{
             exit();
         }
         if ($this->userTaken() == false) {
-        $this->set_message("error", "User already exists");
+            $this->set_message("error", "User already exists");
             header("Location: ../inc/signup.php?error=userTaken");
             exit();
         }
         if ($this->invalidEmail() == false) {
-        $this->set_message("error", "Invalid Email format");
+            $this->set_message("error", "Invalid Email format");
             header("Location: ../inc/signup.php?error=invalidEmail");
             exit();
         }

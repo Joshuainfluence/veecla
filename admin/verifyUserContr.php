@@ -1,6 +1,7 @@
-<?php 
+<?php
 
-class VerifyUser extends GetUser{
+class VerifyUser extends GetUser
+{
     private $username;
 
     public function __construct($username)
@@ -8,15 +9,28 @@ class VerifyUser extends GetUser{
         $this->username = $username;
     }
 
-    public function userVerify(){
-       $data = $this->verifyUser($this->username);
-       return $data;
+    private function emptyInput()
+    {
+        return (empty($this->username) ? true : false);
     }
 
-    public function confirmPasswordEmail(){
-        $data = $this->confirmEmailPassword($this->username);
+    private function set_message($type, $message)
+    {
+        $_SESSION[$type] = $message;
+    }
+
+    public function userVerify()
+    {
+        $data = $this->verifyUser($this->username);
         return $data;
     }
 
-
+    public function confirmPasswordEmail()
+    {
+        if ($this->emptyInput() == true) {
+            $this->set_message("error", "Fields cannot be empty");
+        }
+        $data = $this->confirmEmailPassword($this->username);
+        return $data;
+    }
 }

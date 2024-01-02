@@ -94,4 +94,16 @@ class GetUser extends Dbh{
         $details = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $details;
     }
+
+    // For updating password in the database
+    protected function updatePassword($password, $id){
+        $sql = "UPDATE users SET password = ? WHERE id = ?";
+        $stmt = $this->connection()->prepare($sql);
+        if (!$stmt->execute([$password, $id])) {
+            $stmt = null;
+            exit();
+        }
+
+       $stmt = null;
+    }
 }

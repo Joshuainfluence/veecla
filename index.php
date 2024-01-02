@@ -73,6 +73,7 @@
                 <option value="default">Nigeria</option>
                 <option value="default">South Africa</option>
                 <option value="default">Italy</option>
+                <option value="default">China</option>
             </select>
             <a href="inc/login.php">Shop Now</a>
         </div>
