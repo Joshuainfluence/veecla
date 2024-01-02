@@ -59,7 +59,7 @@ $rows = $display->cartChecker($userId);
                     </span>
                 </a>
 
-                <button class="mobile-nav-toggle" aria-expanded="false" aria-controls=".links"></button>
+                <button class="mobile-nav-toggle" aria-expanded="false" aria-controls=".links"><i class="fa fa-bars fa-2x"></i></button>
             </div>
 
             <div class="links">
