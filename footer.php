@@ -14,11 +14,11 @@
                 }
             </style>
             <ul class="nav flex-column text-light">
-                <li class="nav-item mb-2 d-flex justify-content-center"><a href="#" class="nav-link p-0 ">Home</a></li>
+                <li class="nav-item mb-2 d-flex justify-content-center"><a href="index.php" class="nav-link p-0 ">Home</a></li>
                 <li class="nav-item mb-2 d-flex justify-content-center"><a href="#" class="nav-link p-0">Features</a></li>
                 <li class="nav-item mb-2 d-flex justify-content-center"><a href="#" class="nav-link p-0">Pricing</a></li>
                 <li class="nav-item mb-2 d-flex justify-content-center"><a href="faq.php" class="nav-link p-0">FAQs</a></li>
-                <li class="nav-item mb-2 d-flex justify-content-center"><a href="#" class="nav-link p-0">About</a></li>
+                <li class="nav-item mb-2 d-flex justify-content-center"><a href="aboutUs.php" class="nav-link p-0">About</a></li>
             </ul>
 
         </div>
@@ -160,7 +160,7 @@
 </footer>
 
 
-<footer class="container-fluid mt-5">
+<!-- <footer class="container-fluid mt-5">
 
     <style>
         .nav-link {
@@ -316,7 +316,7 @@
                     <li class="nav-item mb-2 d-flex "><a href="#" class="nav-link p-0 text-light"><i class="fa fa-phone" aria-hidden="true"></i> +234 9077685271</a></li>
                 </ul>
             </div>
-            <!-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
                 <p>
                 <h1>
                     <a href="" class="text-decoration-none fs-6">OUR APPS</a>
@@ -330,7 +330,7 @@
             <div class="col-12 text-muted text-center">
                 <i class="fa fa-copyright" aria-hidden="true"></i>INfluencedigitals.com. All rights reserved.
             </div>
-        </div> -->
+        </div> 
         </div>
         <div class="d-flex justify-content-center py-4 my-4 border-top">
             <p>© 2023 Veecla Company, Inc. All rights reserved.</p>
@@ -359,7 +359,7 @@
 
             </ul>
         </div>
-</footer>
+</footer> -->
 <script>
     window.addEventListener('load', function() {
         // Hide the loader after 3000 milliseconds (3 seconds)

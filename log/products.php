@@ -31,14 +31,14 @@ foreach ($rows as $row) :
                             <div class="col-md-3 carousel-item">
                                 <div class="card" style="width: 100%;">
                                     <div class="w-100" style="height: 30rem;">
-                                    <img src="../admin/uploads/<?= $row['related_image'] ?>" class="w-100 h-100" style="object-fit: cover;">
+                                        <img src="../admin/uploads/<?= $row['related_image'] ?>" class="w-100 h-100" style="object-fit: cover;">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 carousel-item">
                                 <div class="card" style="width: 100%;">
                                     <div class="w-100" style="height: 30rem;">
-                                    <img src="../admin/uploads/<?= $row['applied_image'] ?>" class="w-100 h-100" style="object-fit: cover;">
+                                        <img src="../admin/uploads/<?= $row['applied_image'] ?>" class="w-100 h-100" style="object-fit: cover;">
                                     </div>
                                 </div>
                             </div>
@@ -253,6 +253,7 @@ foreach ($rows as $row) :
                                                 <style>
                                                     .reply {
                                                         margin-left: 2rem;
+
                                                     }
                                                 </style>
                                                 <div class="reply">
@@ -390,7 +391,43 @@ foreach ($rows as $row) :
                         </div>
                     </div>
                 </div>
+                <style>
+                    .application {
+                 
+                        box-shadow: 5px 5px 5px 5px #ccc;
+                        width: 100%;
+                        
+                        
+                        display: flex;
+                    }
+                    .apl{
+                        width: 50%;
+                        height: 500px;
+                        text-wrap:wrap;
+                    }
 
+                    @media screen and (max-width:992px) {
+                        .apl{
+                            width: 100%;
+                        }
+                        .application{
+                            flex-direction: column;
+                        }
+                    }
+                </style>
+                <div class="application fs-5 mt-5 bg-secondary">
+                    <div class="apl text-start">
+                        <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur cum repudiandae ipsum temporibus. Eligendi dolore, neque ex odio voluptate veritatis perspiciatis reprehenderit? Commodi pariatur sit qui exercitationem repudiandae in esse?
+                        Magni nihil molestias, dolorum sequi beatae commodi quidem facere aspernatur laboriosam reiciendis numquam pariatur aut, praesentium non perferendis modi sit animi saepe! Explicabo laboriosam perspiciatis eum quod iusto dolorem totam.
+                        Aliquam ea iusto commodi illo nesciunt magnam quia nostrum non delectus, eligendi excepturi repudiandae temporibus nobis accusantium aperiam 
+                        </p>
+                    </div>
+                    <div class="apl">
+                        <img src="../img/003.jpg" class="img-fluid" style="width:100%; height:500px;" alt="">
+                    </div>
+
+                </div>
             </div>
         </div>
         <?php
