@@ -92,7 +92,7 @@ $id_userid = $_GET['id'];
                 Enter your new Password
             </div>
             <form action="update.inc.php?id=<?= $id_userid?>" method="POST">
-                <input type="text" name="new_password" placeholder="Enter Password" class="form-control">
+                <input type="password" name="new_password" placeholder="Enter Password" class="form-control">
                 <input type="submit" value="Update" class="button">
             </form>
         </div>

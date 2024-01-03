@@ -99,7 +99,8 @@ class GetUser extends Dbh{
     protected function updatePassword($password, $id){
         $sql = "UPDATE users SET password = ? WHERE id = ?";
         $stmt = $this->connection()->prepare($sql);
-        if (!$stmt->execute([$password, $id])) {
+        $hashed = password_hash($password, PASSWORD_DEFAULT);
+        if (!$stmt->execute([$hashed, $id])) {
             $stmt = null;
             exit();
         }

@@ -1,13 +1,13 @@
 <?php 
 
 class UpdateUserPasswordContr extends GetUser{
-    private $id;
     private $password;
+    private $id;
 
-    public function __construct($id, $password)
+    public function __construct($password, $id)
     {
-        $this->id = $id;
         $this->password = $password;
+        $this->id = $id;
     }
     
     private function emptyInput(){

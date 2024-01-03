@@ -94,7 +94,7 @@ require_once __DIR__ . "/../config/session.php";
 
                     </div>
                     <div class="form-group">
-                        <a href="" class="forgotten">Forgotten Password</a>
+                        <a href="../sendEmail/confirmEmail.php" class="forgotten">Forgotten Password</a>
                     </div>
                     <script>
                         $(document).ready(function() {

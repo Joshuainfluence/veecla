@@ -117,7 +117,7 @@
                 Enter Email your email address. A verification link will be sent to your Email to make necessary changes.
             </div>
             <form action="sendEmailPassword.php" method="POST">
-                <input type="text" name="user_email" placeholder="Enter E-mail" class="form-control">
+                <input type="text" name="user_email" id="user_email" placeholder="Enter E-mail" class="form-control">
                 <input type="submit" value="Proceed" class="button">
             </form>
         </div>

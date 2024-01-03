@@ -6,12 +6,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     require_once __DIR__ . "/../config/dbh.php";
     require_once __DIR__ . "/../admin/admin.classes.php";
-    require_once __DIR__ . "/../admin/updatePasswordContr.php.php";
+    require_once __DIR__ . "/../admin/updatePasswordContr.php";
     require_once __DIR__. "/../config/session.php";
 
     $update = new UpdateUserPasswordContr($password, $id);
 
-    $update->passwordUpdate();
+    $update->passwordUpdate($password, $id);
 
-    header("Location: ../inc/login.php");
+    header("Location: ../inc/login.php?passwordChanged");
 }
