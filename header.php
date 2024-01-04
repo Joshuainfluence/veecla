@@ -52,20 +52,25 @@ $rows = $display->cartChecker($userId);
             </style>
 
             <div class="buttons-tin">
-                <a href="../cart/checkout.php" class="cart-img"><i class="fa fa-cart-plus fa-2x"></i>
+                <style>
+                    span .badge{
+                        font-size: 15px;
+                    }
+                </style>
+                <a href="../cart/checkout.php" class="cart-img"><i class="fa fa-cart-plus fa-1x"></i>
                     <span class="position-relative top-0 start-60 translate-middle badge rounded-circle bg-success">
                         <?= count($rows, COUNT_NORMAL) ?>
                         <span class="visually-hidden">unread messages</span>
                     </span>
                 </a>
 
-                <button class="mobile-nav-toggle" aria-expanded="false" aria-controls=".links"><i class="fa fa-bars fa-2x"></i></button>
+                <button class="mobile-nav-toggle" aria-expanded="false" aria-controls=".links"><i class="fa fa-bars fa-1.5x"></i></button>
             </div>
 
             <div class="links">
                 <ul class="content-list flex ff" id="content-list" data-visible="false">
                     <li><a href="index.php"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="#"><i class="fa fa-bell"></i> Notifications</a></li>
+                    <li><a href="#"> Shop</a></li>
                     <li><a href="#">Categories</a>
                         <ul class="drop-menu">
                             <li>
@@ -84,7 +89,7 @@ $rows = $display->cartChecker($userId);
                         </ul>
                     </li>
                     <li class="carty">
-                        <a href="../cart/checkout.php"><i class="fa fa-cart-plus fa-2x"></i>
+                        <a href="../cart/checkout.php"><i class="fa fa-cart-plus fa-1x"></i>
                             <span class="position-relative top-0 start-60 translate-middle badge rounded-circle bg-success">
                                 <?= count($rows, COUNT_NORMAL) ?>
                                 <span class="visually-hidden">unread messages</span>

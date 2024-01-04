@@ -32,7 +32,7 @@
 .logo {
     font-weight: 600;
     margin-left: 2%;
-    width: 30%;
+    width: 40%;
     height: auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -44,7 +44,7 @@
 }
 
 .links {
-    width: 70%;
+    width: 60%;
 
 }
 
@@ -60,6 +60,7 @@
 li a {
     text-decoration: none;
     color: #fff;
+    font-size: 15px;
 }
 
 li a:hover {

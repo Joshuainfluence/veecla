@@ -63,7 +63,7 @@ $data = $display->displayProducts4();
     }
 
     .product_container {
-        width: 20rem;
+        width:20rem;
         /* background: #fff; */
         background-image: linear-gradient(grey, pink);
         display: flex;
@@ -80,6 +80,7 @@ $data = $display->displayProducts4();
 
     .card-img-top {
         height: 17rem;
+        /* width: 90%; */
         margin-top: 1rem;
     }
 
@@ -283,6 +284,20 @@ $data = $display->displayProducts4();
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col-3">
+                    <h5>Product Categories</h5>
+                    <ul>
+                        <li>Accessories</li>
+                        <li>Accessories</li>
+                        <li>Accessories</li>
+                        <li>Accessories</li>
+                        <li>Accessories</li>
+
+                    </ul>
+                </div>
+            </div>
+
             <div class="row mt-3">
                 <div class="col-12 fixed-text mb-2 d-flex justify-content-between fs-4 text-light">
                     <p>Top Products</p>
@@ -302,8 +317,9 @@ $data = $display->displayProducts4();
                                     <h5 class="card-title"><?= $row['product_name'] ?></h5>
                                     <p class="card-text"><?= $row['product_description'] ?></p>
                                     <div class="check">
-                                        <a href="products.php?id=<?= $row['id'] ?>" class="button-cart">View</a>
-                                        <a href="../cart/cart.inc.php?id=<?= $row['id'] ?>" class="button-cart">Add to cart</a>
+                                        <a href="products.php?id=<?= $row['id'] ?>" class="btn btn-outline-secondary"><i class="fa fa-eye"></i></a>
+                                        <a href="products.php?id=<?= $row['id'] ?>" class="btn btn-outline-secondary"><i class="fa fa-heart"></i></a>
+                                        <a href="../cart/cart.inc.php?id=<?= $row['id'] ?>" class="btn btn-outline-secondary"><i class="fa fa-plus"></i> Add to cart</a>
                                     </div>
                                 </div>
                             </div>
