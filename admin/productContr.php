@@ -5,7 +5,10 @@ class ProductContr extends Product
     private $product_name;
     private $product_description;
     private $product_price;
+    private $product_unit;
     private $product_info;
+
+    // for the first image
     private $product_image;
     private $image_name; //the image name
     private $image_type; // the image type
@@ -44,11 +47,12 @@ class ProductContr extends Product
     public $error;
 
 
-    public function __construct($product_name, $product_description, $product_price, $product_info, $files, $files2, $files3)
+    public function __construct($product_name, $product_description, $product_price, $product_unit, $product_info, $files, $files2, $files3)
     {
         $this->product_name = $product_name;
         $this->product_description = $product_description;
         $this->product_price = $product_price;
+        $this->product_unit = $product_unit;
         $this->product_info = $product_info;
         // $this->product_image = $product_image;
         // $this->product_image = $product_image;
@@ -105,7 +109,7 @@ class ProductContr extends Product
         }
 
         
-        $this->addProducts($this->product_name, $this->product_description, $this->product_price, $this->product_info, $this->newName(), $this->newName2(), $this->newName3());
+        $this->addProducts($this->product_name, $this->product_description, $this->product_price, $this->product_unit, $this->product_info, $this->newName(), $this->newName2(), $this->newName3());
         // header("location :addProducts.php?uploadsuccessful");
     }
 
@@ -120,7 +124,7 @@ class ProductContr extends Product
 
     protected function emptyInput()
     {
-        if (empty($this->product_name) || empty($this->product_description) || empty($this->product_price) || empty($this->product_info) || empty($this->newName()) || empty($this->newName2()) || empty($this->newName3())) {
+        if (empty($this->product_name) || empty($this->product_description) || empty($this->product_price) || empty($this->product_unit)  || empty($this->product_info) || empty($this->newName()) || empty($this->newName2()) || empty($this->newName3())) {
             return true;
         } else {
             return false;

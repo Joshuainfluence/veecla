@@ -58,6 +58,7 @@ CREATE TABLE cart(
     product_name varchar(255) NOT NULL,
     product_description varchar(255) NOT NULL,
     product_price int(11) NOT NULL,
+    product_unit int(11) NOT NULL,
     product_info varchar(255) NOT NULL,
     product_image varchar(1000) NOT NULL,
     is_product TINYINT(1) NOT NULL DEFAULT 0,

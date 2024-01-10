@@ -404,6 +404,8 @@ foreach ($rows as $row) :
                         width: 50%;
                         height: 500px;
                         text-wrap:wrap;
+                        display: flex;
+                        align-items: center;
                     }
 
                     @media screen and (max-width:992px) {
@@ -415,7 +417,7 @@ foreach ($rows as $row) :
                         }
                     }
                 </style>
-                <div class="application fs-5 mt-5 bg-secondary">
+                <div class="application fs-6 mt-5 bg-secondary">
                     <div class="apl text-start">
                         <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur cum repudiandae ipsum temporibus. Eligendi dolore, neque ex odio voluptate veritatis perspiciatis reprehenderit? Commodi pariatur sit qui exercitationem repudiandae in esse?

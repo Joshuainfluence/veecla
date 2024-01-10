@@ -21,7 +21,13 @@ require_once __DIR__ . "/adminHeader.php";
                 <label for="product_price">
                     <h5>Product Price</h5>
                 </label>
-                <input type="text" name="product_price" id="product_price" class="form-control " placeholder="Enter Product price">
+                <input type="number" name="product_price" id="product_price" class="form-control " placeholder="Enter Product price">
+            </div>
+            <div class="form-group mt-2">
+                <label for="product_unit">
+                    <h5>Product Unit</h5>
+                </label>
+                <input type="text" name="product_unit" id="product_unit" class="form-control " placeholder="Enter Product unit">
             </div>
             <div class="form-group mt-2">
                 <label for="product_info">

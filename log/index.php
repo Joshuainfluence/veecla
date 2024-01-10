@@ -63,7 +63,7 @@ $data = $display->displayProducts4();
     }
 
     .product_container {
-        width:20rem;
+        width: 20rem;
         /* background: #fff; */
         background-image: linear-gradient(grey, pink);
         display: flex;
@@ -100,7 +100,7 @@ $data = $display->displayProducts4();
     .card-title {
         height: 1rem;
     }
- 
+
 
 
     @media screen and (max-width: 1200px) {
@@ -184,7 +184,7 @@ $data = $display->displayProducts4();
 
         /* Add these styles to your existing styles */
 
-       
+
 
 
         /* @keyframes fixed_text {
@@ -316,6 +316,16 @@ $data = $display->displayProducts4();
                                 <div class="card-body">
                                     <h5 class="card-title"><?= $row['product_name'] ?></h5>
                                     <p class="card-text"><?= $row['product_description'] ?></p>
+                                    <p class="text-muted"><?= $row['product_unit'] ?>
+                                    <?php 
+                                        if ($row['product_unit'] <= 1) {
+                                            echo "Unit";
+                                        }else{
+                                            echo "Units";
+                                        }
+                                    ?>
+
+                                    </p>
                                     <div class="check">
                                         <a href="products.php?id=<?= $row['id'] ?>" class="btn btn-outline-secondary"><i class="fa fa-eye"></i></a>
                                         <a href="products.php?id=<?= $row['id'] ?>" class="btn btn-outline-secondary"><i class="fa fa-heart"></i></a>
@@ -326,7 +336,7 @@ $data = $display->displayProducts4();
                         </div>
                     </div>
 
-                    
+
 
 
                 <?php endforeach ?>
@@ -349,7 +359,7 @@ $data = $display->displayProducts4();
 
 <!-- Add the following script at the end of your HTML file, just before the closing </body> tag -->
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function() {
         // Get the elements to be animated
         var productContainers = document.querySelectorAll('.product_container');
 
@@ -359,7 +369,7 @@ $data = $display->displayProducts4();
         }
 
         // Trigger the animation for each product container when the page is loaded
-        productContainers.forEach(function (container) {
+        productContainers.forEach(function(container) {
             addAnimationClass(container);
         });
     });

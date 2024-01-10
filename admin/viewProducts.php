@@ -60,6 +60,7 @@ require_once __DIR__ . "/adminHeader.php";
                         <th scope="row">Name</th>
                         <th scope="row">Description</th>
                         <th scope="row">Price</th>
+                        <th scope="row">Unit</th>
                         <th scope="row" style="width:400px;">Information on product</th>
                         <th scope="row">Delete</th>
                         <th scope="row">Edit</th>
@@ -103,6 +104,7 @@ require_once __DIR__ . "/adminHeader.php";
                             <td><?= $row['product_name'] ?></td>
                             <td><?= $row['product_description'] ?></td>
                             <td>$<?= $row['product_price'] ?></td>
+                            <td><?= $row['product_unit']?></td>
                             <td class="info"><?= $row['product_info'] ?></td>
 
                             <td><a href="delete.inc.php?id=<?= $row['id']; ?>" class="btn-del btn btn-danger">Delete</a></td>

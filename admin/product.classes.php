@@ -19,9 +19,9 @@ class Product extends Dbh
 
 
     // method to insert products to the database
-    protected function addProducts($product_name, $product_description, $product_price, $product_info, $product_image, $related_image, $applied_image)
+    protected function addProducts($product_name, $product_description, $product_price, $product_unit, $product_info, $product_image, $related_image, $applied_image)
     {
-        $sql = "INSERT INTO products (product_name, product_description, product_price, product_info, product_image, related_image, applied_image) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO products (product_name, product_description, product_price, product_unit, product_info, product_image, related_image, applied_image) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $this->connection()->prepare($sql);
         // $stmt->bindParam(':product_name', $product_name);
         // $stmt->bindParam(':product_description', $product_description);
@@ -29,7 +29,7 @@ class Product extends Dbh
         // $stmt->bindParam(':product_info', $product_info);
         // $stmt->bindParam(':product_image', $product_image);
 
-        if (!$stmt->execute([$product_name, $product_description, $product_price, $product_info, $product_image, $related_image, $applied_image])) {
+        if (!$stmt->execute([$product_name, $product_description, $product_price, $product_unit, $product_info, $product_image, $related_image, $applied_image])) {
             $stmt = null;
             header("location: addProducts.php?error=connectionfailed");
             exit();
@@ -43,7 +43,7 @@ class Product extends Dbh
     // method to display all products information from the database
     protected function displayProducts($is_product)
     {
-        $sql = "SELECT id, product_name, product_description, product_price, product_info, product_image, related_image, applied_image FROM products WHERE is_product = ?";
+        $sql = "SELECT id, product_name, product_description, product_price, product_unit, product_info, product_image, related_image, applied_image FROM products WHERE is_product = ?";
         $stmt = $this->connection()->prepare($sql);
 
         if (!$stmt->execute([$is_product])) {
