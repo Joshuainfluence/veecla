@@ -285,21 +285,43 @@ $data = $display->displayProducts4();
             </div>
 
             <div class="row">
-                <div class="col-3">
+                <div class="col-12">
                     <h5>Product Categories</h5>
-                    <ul>
-                        <li class="d-flex justify-content-center align-items-center">
-                            <a href="">
-                                <img src="../img/001.jpg" class="w-50" alt="">]
-                                <h2>Accessories</h2>
-                            </a>
-                        </li>
-                        <li>Accessories</li>
-                        <li>Accessories</li>
-                        <li>Accessories</li>
-                        <li>Accessories</li>
-
-                    </ul>
+                    <marquee behavior="" direction="lhs">
+                        <ul class="d-flex">
+                            <li class="d-flex justify-content-center align-items-center">
+                                <a href="">
+                                    <img src="../img/001.jpg" class="w-50" alt="">
+                                    <h5>Accessories</h5>
+                                </a>
+                            </li>
+                            <li class="d-flex justify-content-center align-items-center">
+                                <a href="">
+                                    <img src="../img/001.jpg" class="w-50" alt="">
+                                    <h5>Accessories</h5>
+                                </a>
+                            </li>
+                            <li class="d-flex justify-content-center align-items-center">
+                                <a href="">
+                                    <img src="../img/001.jpg" class="w-50" alt="">
+                                    <h5>Accessories</h5>
+                                </a>
+                            </li>
+                            <li class="d-flex justify-content-center align-items-center">
+                                <a href="">
+                                    <img src="../img/001.jpg" class="w-50" alt="">
+                                    <h5>Accessories</h5>
+                                </a>
+                            </li>
+                            <li class="d-flex justify-content-center align-items-center">
+                                <a href="">
+                                    <img src="../img/001.jpg" class="w-50" alt="">
+                                    <h5>Accessories</h5>
+                                </a>
+                            </li>
+                          
+                        </ul>
+                    </marquee>
                 </div>
             </div>
 

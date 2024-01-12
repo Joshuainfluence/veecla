@@ -57,10 +57,14 @@ require_once __DIR__. "/adminHeader.php";
                             <td><?= $row['users_id'] ?></td>
                             <td><img src="../admin//uploads/<?= $row['product_image'] ?>" style="width:120px; height:120px;" alt=""></td>
                             
-
+                            
 
                             
                         </tr>
+                        <tr>
+                        <td>User <?= $row['users_id']?> ordered <?=$row['product_name']?> on <?=$row['date_added']?> expected delivery on </td>
+                        </tr>
+                        
                     <?php endforeach ?>
 
                 </tbody>
