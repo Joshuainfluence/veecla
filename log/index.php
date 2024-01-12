@@ -288,7 +288,12 @@ $data = $display->displayProducts4();
                 <div class="col-3">
                     <h5>Product Categories</h5>
                     <ul>
-                        <li>Accessories</li>
+                        <li class="d-flex justify-content-center align-items-center">
+                            <a href="">
+                                <img src="../img/001.jpg" class="w-50" alt="">]
+                                <h2>Accessories</h2>
+                            </a>
+                        </li>
                         <li>Accessories</li>
                         <li>Accessories</li>
                         <li>Accessories</li>
@@ -317,13 +322,13 @@ $data = $display->displayProducts4();
                                     <h5 class="card-title"><?= $row['product_name'] ?></h5>
                                     <p class="card-text"><?= $row['product_description'] ?></p>
                                     <p class="text-muted"><?= $row['product_unit'] ?>
-                                    <?php 
+                                        <?php
                                         if ($row['product_unit'] <= 1) {
                                             echo "Unit";
-                                        }else{
+                                        } else {
                                             echo "Units";
                                         }
-                                    ?>
+                                        ?>
 
                                     </p>
                                     <div class="check">
