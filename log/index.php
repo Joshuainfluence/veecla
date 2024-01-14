@@ -288,7 +288,7 @@ $data = $display->displayProducts4();
                 <div class="col-12">
                     <h5>Product Categories</h5>
                     <marquee behavior="" direction="lhs">
-                        <ul class="d-flex">
+                        <!-- <ul class="d-flex">
                             <li class="d-flex justify-content-center align-items-center">
                                 <a href="">
                                     <img src="../img/001.jpg" class="w-50" alt="">
@@ -320,7 +320,42 @@ $data = $display->displayProducts4();
                                 </a>
                             </li>
                           
-                        </ul>
+                        </ul> -->
+
+                        <div class="row d-flex">
+                            <div class="col-sm-12 col-md-4 col-lg-3">
+                                <div class="card">
+                                    <img src="../img/001.jpg" alt="" class="img-fluid">
+                                    <div class="card-body">
+                                        <p>better product</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4 col-lg-3">
+                                <div class="card">
+                                    <img src="../img/001.jpg" alt="" class="img-fluid">
+                                    <div class="card-body">
+                                        <p>better product</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4 col-lg-3">
+                                <div class="card">
+                                    <img src="../img/001.jpg" alt="" class="img-fluid">
+                                    <div class="card-body">
+                                        <p>better product</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4 col-lg-3">
+                                <div class="card">
+                                    <img src="../img/001.jpg" alt="" class="img-fluid">
+                                    <div class="card-body">
+                                        <p>better product</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </marquee>
                 </div>
             </div>
@@ -363,14 +398,7 @@ $data = $display->displayProducts4();
                         </div>
                     </div>
 
-
-
-
                 <?php endforeach ?>
-
-
-
-
             </div>
         </div>
 

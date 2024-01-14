@@ -69,7 +69,8 @@
                         <p class="text-muted fw-bold fs-6">INTERFACE</p>
                         <p><i class="fa fa-cog" aria-hidden="true"></i> <a href="" class="text-decoration-none"> Webpages</a></p>
                         <p><i class="fa fa-bar-chart" aria-hidden="true"></i><a href="" class="text-decoration-none"> Admin Profile</a></p>
-                        <p><a href="index.php" class="text-decoration-none"> View Users</a></p>
+                        <p><a href="index.php" class="text-decoration-none"> Website Overview</a></p>
+                        <p><a href="users.php" class="text-decoration-none"> View Users</a></p>
 
                         <p><a href="viewProducts.php" class="text-decoration-none">View Products</a></p>
                         <p><a href="addProducts.php" class="text-decoration-none">Add Products</a></p>
