@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="../img/logo5.png" />
     <link rel="stylesheet" href="../assets/bootstrap/bootstrap5.min.css">
     <link rel="stylesheet" href="../assets/font_awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../assets/callout.css">
 </head>
 
 <body>
