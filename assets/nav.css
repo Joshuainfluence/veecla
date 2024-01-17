@@ -234,9 +234,10 @@ ul .drop-menu {
         top: 1rem;
         color: #fff;
         transition: 0.5s ease-in;
-    
+
     }
-    .cart-img:hover{
+
+    .cart-img:hover {
         color: #FF1694;
     }
 
@@ -292,7 +293,7 @@ ul .drop-menu {
         transform: translateX(0%);
     }
 
-  
+
 
 
 

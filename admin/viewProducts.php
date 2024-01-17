@@ -26,35 +26,12 @@ require_once __DIR__ . "/adminHeader.php";
 
 
             <!-- Modal Dialog for adding products/from for adding products-->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Veecla Administration</h5>
-                            <button type="button" class="btn-close btn btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <form action="product.inc.php" method="POST" enctype="multipart/form-data">
-                            <div class="modal-body">
-                                <input type="text" name="product_name" id="" class="form-control mt-2" placeholder="Enter product name">
-                                <input type="text" name="product_description" id="" class="form-control mt-2" placeholder="Enter product Description">
-                                <input type="text" name="product_price" id="" class="form-control mt-2" placeholder="Enter product Price">
-                                <textarea name="product_info" id="" cols="30" rows="10" class="form-control mt-2" placeholder="More informations on the product"></textarea>
-                                <input type="file" name="product_image" id="" class="form-control mt-2">
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" name="submit" class="btn btn-primary">Add Product</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
 
             <br>
             <table class="table table-responsive table-bordered border-light" style="background-color:#fff;">
                 <thead>
                     <tr>
-                        
+
                         <th scope="row">S/N</th>
 
                         <th scope="row">Name</th>
@@ -102,10 +79,48 @@ require_once __DIR__ . "/adminHeader.php";
 
                             <td><?= $row['id'] ?></td>
                             <td><?= $row['product_name'] ?></td>
-                            <td><?= $row['product_description'] ?></td>
+                            <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#productDescription">View <i class="fa fa-eye"></i</button></td>
+                            <div class="modal fade" id="productDescription" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Product Description</h5>
+                                            <button type="button" class="btn-close btn btn-danger" data-bs-dismiss="modal" aria-label="Close">></button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <?= $row['product_description'] ?>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                            <!-- <button type="submit" name="submit" class="btn btn-primary">Add Product</button> -->
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
                             <td>$<?= $row['product_price'] ?></td>
-                            <td><?= $row['product_unit']?></td>
-                            <td class="info"><?= $row['product_info'] ?></td>
+                            <td><?= $row['product_unit'] ?></td>
+                            <td class="info"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">View <i class="fa fa-eye"></i></button></td>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Product Information</h5>
+                                            <button type="button" class="btn-close btn btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <?= $row['product_info'] ?>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                            <!-- <button type="submit" name="submit" class="btn btn-primary">Add Product</button> -->
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
 
                             <td><a href="delete.inc.php?id=<?= $row['id']; ?>" class="btn-del btn btn-danger">Delete</a></td>
                             <td><a href="edit_product.php?id=<?= $row['id']; ?> m=1" class="btn-del btn btn-warning">Edit</a></td>
