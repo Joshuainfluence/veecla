@@ -20,14 +20,15 @@ require_once __DIR__ . "/adminHeader.php";
 
             <!-- modal -->
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-default mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+            <!-- <button type="button" class="btn btn-default mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Add Products
-            </button>
+            </button> -->
 
 
             <!-- Modal Dialog for adding products/from for adding products-->
 
-            <br>
+            
             <table class="table table-responsive table-bordered border-light" style="background-color:#fff;">
                 <thead>
                     <tr>
