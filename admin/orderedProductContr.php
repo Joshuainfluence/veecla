@@ -14,4 +14,12 @@ class OrderProductsContr extends GetUser{
         }
         return $this->OrderedProductsAdmin($this->is_product);
     }
+
+    public function UnitTotal(){
+        if ($this->is_product !== 0) {
+            exit();
+        }
+
+        return $this->totalUnits($this->is_product);
+    }
 }

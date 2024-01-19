@@ -107,4 +107,28 @@ class GetUser extends Dbh{
 
        $stmt = null;
     }
+
+    protected function totalUnits($is_product){
+        $sql = "SELECT product_unit FROM products WHERE is_product = ?";
+        $stmt = $this->connection()->prepare($sql);
+        if (!$stmt->execute([$is_product])) {
+            $stmt = null;
+            exit();
+        }
+
+        $details = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $details;
+    }
+
+    protected function totalUsers($is_admin){
+        $sql = "SELECT id FROM users WHERE is_admin = ?";
+        $stmt = $this->connection()->prepare($sql);
+        if (!$stmt->execute([$is_admin])) {
+            $stmt = null;
+            exit();
+        }
+
+        $details = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $details;
+    }
 }

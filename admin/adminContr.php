@@ -26,6 +26,16 @@ class AdminContr extends GetUser
         return $data;
        
     }
+
+    // for displaying the total user on the overview page
+    public function UserTotal(){
+        if ($this->is_admin !== 0) {
+            exit();
+        }
+
+        $data = $this->totalUsers($this->is_admin);
+        return $data;
+    }
 }
 
 
