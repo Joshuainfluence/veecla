@@ -4,12 +4,12 @@
     require_once __DIR__ . "/admin.classes.php";
     require_once __DIR__ . "/orderedProductContr.php";
     // for the display of the total users
-    require_once __DIR__. "/adminContr.php";
+    require_once __DIR__ . "/adminContr.php";
     // for the display of the total units
     $isProduct = 0;
     $value = new OrderProductsContr($isProduct);
     $rows = $value->UnitTotal();
-// for the display of the total users
+    // for the display of the total users
     $is_admin = 0;
     $adminValue = new AdminContr($is_admin);
     $userRows = $adminValue->UserTotal();
@@ -31,7 +31,8 @@
                                     $total += $row['product_unit'];
                                 }
                                 ?>
-                            <b> <?= $total ?> </b> units</p>
+                             <b> <?= $total ?> </b> units
+                         </p>
                      </div>
 
                  </div>
@@ -40,7 +41,7 @@
          <div class="col-sm-12 col-md-4 col-lg-4">
              <div class="bd-content ps-lg-4">
                  <div class="bd-callout bd-callout-danger d-flex">
-                     <i class="fa fa-cart-arrow-down fa-4x me-2"></i>
+                     <i class="fa fa-shopping-cart fa-4x me-2"></i>
                      <div class="col">
                          <h4>Products Sold out</h4>
                          <p>We have about 15 products sold out</p>
@@ -52,17 +53,18 @@
          <div class="col-sm-12 col-md-4 col-lg-4">
              <div class="bd-content ps-lg-4">
                  <div class="bd-callout bd-callout-success d-flex">
-                    <i class="fa fa-group me-2 fa-4x"></i>
+                     <i class="fa fa-group me-2 fa-4x"></i>
                      <div class="col">
-                     <h4>Registered Users</h4>
-                     <p>Total Number of user registered are
-                         <?php 
-                        echo "<b>".count($userRows, COUNT_NORMAL) . "</b>";
-                     ?>
-                      <a href="users.php" class="text-decoration-none text-success">View all</a></p>
-                    
+                         <h4>Registered Users</h4>
+                         <p>Total Number of user registered are
+                             <?php
+                                echo "<b>" . count($userRows, COUNT_NORMAL) . "</b>";
+                                ?>
+                             <a href="users.php" class="text-decoration-none text-success">View all</a>
+                         </p>
+
                      </div>
-                     
+
                  </div>
              </div>
          </div>
@@ -70,18 +72,24 @@
      <div class="row">
          <div class="col-sm-12 col-md-4 col-lg-4">
              <div class="bd-content ps-lg-4">
-                 <div class="bd-callout bd-callout-warning">
-                     <h4>Products Paid</h4>
-                     <p>Products Ordered was about 19 units</p>
+                 <div class="bd-callout bd-callout-warning d-flex">
+                     <i class="fa fa-cc-visa fa-4x me-2"></i>
+                     <div class="col">
+                         <h4>Products Paid</h4>
+                         <p>Products Ordered was about 19 units</p>
+                     </div>
 
                  </div>
              </div>
          </div>
          <div class="col-sm-12 col-md-4 col-lg-4">
              <div class="bd-content ps-lg-4">
-                 <div class="bd-callout bd-callout-primary">
-                     <h4>Produts Delivered</h4>
-                     <p>We have about 15 products sold out</p>
+                 <div class="bd-callout bd-callout-primary d-flex">
+                    <i class="fa fa-taxi fa-4x me-2"></i>
+                     <div class="col">
+                         <h4>Products Deliv.</h4>
+                         <p>We have about 15 products sold out</p>
+                     </div>
                  </div>
              </div>
          </div>
