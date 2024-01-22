@@ -95,9 +95,12 @@
          </div>
          <div class="col-sm-12 col-md-4 col-lg-4">
              <div class="bd-content ps-lg-4">
-                 <div class="bd-callout bd-callout-dark">
-                     <h4>Highest Sold Products</h4>
+                 <div class="bd-callout bd-callout-dark d-flex">
+                    <i class="fa fa-arrow-up fa-4x me-2"></i>
+                    <div class="col">
+                    <h4>Highest Sold Products</h4>
                      <p>Total Number of user registered were <b>51</b></p>
+                    </div>
                  </div>
              </div>
          </div>
