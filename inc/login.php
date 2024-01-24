@@ -81,6 +81,7 @@ require_once __DIR__ . "/../config/session.php";
 
             </div>
             <div class="content">
+                <!-- displays an alert when user signup in successfully -->
                 <div class="alert"></div>
                 <div class="title">
                     Login your Account to get access
