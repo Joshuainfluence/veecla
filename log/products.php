@@ -118,11 +118,33 @@ foreach ($rows as $row) :
                         </form>
                     </div>
                     <div class="row">
+                        <h5 class="text-danger"><?= $row['product_unit'] ?> Units left</h5>
+                        <label for="" class="fw-bold fs-2" id="countLabel">0</label>
+                    </div>
+                    <div class="row">
                         <div class="buttons d-flex">
-                            <a href="" class="button-cart-alt3">-</a>
-                            <a href="" class="button-cart-alt3">1</a>
-                            <a href="" class="button-cart-alt3">+</a>
-                            <a href="../cart/cart.inc.php?id=<?= $row['id'] ?>" class="button-cart-alt3"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Add to cart</a>
+                            <button id="decrease" class="button-cart-alt3">-</button>
+                            <button id="one" class="button-cart-alt3">1</button>
+                            <button id="increase" class="button-cart-alt3">+</button>
+                            <a href="../cart/cart.inc.php?id=<?= $row['id'] ?>" class="button-cart-alt3"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+                            <script>
+                                let count = 0;
+
+                                document.getElementById("decrease").onclick = function() {
+                                    count -= 1;
+                                    document.getElementById("countLabel").innerHTML = count;
+                                }
+
+                                document.getElementById("one").onclick = function() {
+                                    count = 1;
+                                    document.getElementById("countLabel").innerHTML = count;
+                                }
+
+                                document.getElementById("increase").onclick = function() {
+                                    count += 1;
+                                    document.getElementById("countLabel").innerHTML = count;
+                                }
+                            </script>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -393,40 +415,44 @@ foreach ($rows as $row) :
                 </div>
                 <style>
                     .application {
-                 
+
                         box-shadow: 5px 5px 5px 5px #ccc;
                         width: 100%;
-                        
-                        
+
+
                         display: flex;
                     }
-                    .apl{
+
+                    .apl {
                         width: 50%;
-                        height: 500px;
-                        text-wrap:wrap;
+                        height: 600px;
+                        text-wrap: wrap;
                         display: flex;
                         align-items: center;
                     }
 
                     @media screen and (max-width:992px) {
-                        .apl{
+                        .apl {
                             width: 100%;
+                            height: 100%;
                         }
-                        .application{
+
+                        .application {
                             flex-direction: column;
                         }
                     }
                 </style>
+
+            </div>
+            <div class="row mt-2">
                 <div class="application fs-6 mt-5 bg-secondary">
                     <div class="apl text-start">
                         <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur cum repudiandae ipsum temporibus. Eligendi dolore, neque ex odio voluptate veritatis perspiciatis reprehenderit? Commodi pariatur sit qui exercitationem repudiandae in esse?
-                        Magni nihil molestias, dolorum sequi beatae commodi quidem facere aspernatur laboriosam reiciendis numquam pariatur aut, praesentium non perferendis modi sit animi saepe! Explicabo laboriosam perspiciatis eum quod iusto dolorem totam.
-                        Aliquam ea iusto commodi illo nesciunt magnam quia nostrum non delectus, eligendi excepturi repudiandae temporibus nobis accusantium aperiam 
+                            <?= $row['product_info'] ?>
                         </p>
                     </div>
                     <div class="apl">
-                        <img src="../img/003.jpg" class="img-fluid" style="width:100%; height:500px;" alt="">
+                        <img src="../admin/uploads/<?= $row['related_image'] ?>" class="img-fluid" style="width:100%; height:500px;" alt="">
                     </div>
 
                 </div>
@@ -440,6 +466,7 @@ foreach ($rows as $row) :
 
 
 <?php endforeach ?>
+
 
 
 </body>

@@ -57,7 +57,7 @@ $rows = $display->cartChecker($userId);
                         font-size: 15px;
                     }
                 </style>
-                <a href="../cart/checkout.php" class="cart-img"><i class="fa fa-cart-plus fa-1x"></i>
+                <a href="../cart/checkout.php" class="cart-img"><i class="fa fa-shopping-cart fa-1x"></i>
                     <span class="position-relative top-0 start-60 translate-middle badge rounded-circle bg-success">
                         <?= count($rows, COUNT_NORMAL) ?>
                         <span class="visually-hidden">unread messages</span>
@@ -89,7 +89,7 @@ $rows = $display->cartChecker($userId);
                         </ul>
                     </li>
                     <li class="carty">
-                        <a href="../cart/checkout.php"><i class="fa fa-cart-plus fa-1x"></i>
+                        <a href="../cart/checkout.php"><i class="fa fa-shopping-cart fa-1x"></i>
                             <span class="position-relative top-0 start-60 translate-middle badge rounded-circle bg-success">
                                 <?= count($rows, COUNT_NORMAL) ?>
                                 <span class="visually-hidden">unread messages</span>
