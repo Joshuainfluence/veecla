@@ -299,6 +299,8 @@ $rows = $display->cartChecker($userId);
 
                     <button class="w-100 btn btn-default btn-lg mb-3" type="submit">Continue to checkout</button>
                     <!-- </form> -->
+                    <a href="../log/index.php" class="text-decoration-none text-danger fs-5">return</a>
+        
                 </div>
             </div>
             <!-- na the javascript code dey -->

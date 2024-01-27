@@ -141,9 +141,32 @@ $rows = $admin->display();
                             <label for="phpto" class="fs-3 fw-bold">Change photo<i class="fa fa-camera fa-1x"></i></label>
                             <input type="file" id="phpto" class="form-control d-none">
 
-                            <h5 class="mt-2 mb-0 fw-bold">
-                                <?php echo strtoupper($ministry['fullName']); ?>
+                            <h5 class="mt-2 mb-0 fw-bold d-flex justify-content-center align-item-center">
+                                <?php echo strtoupper($ministry['fullName']); ?> <div class="verified-badge"></div>
                             </h5>
+                           
+                            <style>
+                                .verified-badge {
+                                    width: 20px;
+                                    height: 20px;
+                                    background-color: #1da1f2;
+                                    border-radius: 50%;
+                                    border: 2px solid #fff;
+                                    position: relative;
+                                    margin-bottom: -1rem;
+                                }
+
+                                .verified-badge::before {
+                                    content: "\2713";
+                                    color: #fff;
+                                    font-size: 12px;
+                                    font-weight: bold;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                }
+                            </style>
                             <span>Registered User</span>
 
                             <div class="px-4 mt-1">
@@ -334,9 +357,21 @@ $rows = $admin->display();
                             <a href="" class="button-cart ms-3">Edit</a>
                         </div> -->
 
-                        <div class="d-flex justify-content-center">
-                            <a href="../cart/checkout.php" class="btn btn-default-alt btn-lg mb-3">Proceed to Checkout</a>
-                        </div>
+                        <?php
+                        if (count($rows1, COUNT_NORMAL) == 0) {
+
+                        ?>
+                            <p>You have not ordered any Product yet!</p>
+                        <?php
+                        } else {
+                        ?>
+                            <div class="d-flex justify-content-center">
+                                <a href="../cart/checkout.php" class="btn btn-default-alt btn-lg mb-3">Proceed to Checkout</a>
+                            </div>
+                        <?php
+                        }
+
+                        ?>
                     </div>
                     <div class="card-footer">
                         <!-- <label for="happy">
